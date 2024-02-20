@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrousel d'Images</title>
+  <style>
+    .carousel {
+      display: block;
+      width: 70%;
+      margin: auto;
+      overflow: hidden;
+      position: relative;
+      border-radius: 10px;
+      margin-top: 50px;
+    }
+  
+    .carousel img {
+      width: 100%;
+      display: none;
+    }
+  
+    .text {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      color: #fff;
+      font-size: 20px;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      border-radius: 5px;
+    }
+  
+    .prev {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      font-size: 20px;
+      cursor: pointer;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      border-radius: 5px;
+    }
+  
+    .prev:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  </style>
+</head>
+<body>
+
+    <a href="index.html" class="prev">&lt;</a>
+
+<div class="carousel">
+  <img class="mySlides" src="livre.jpg" alt="Image 1">
+  <img class="mySlides" src="sachetboulangerie.jpg" alt="Image 2">
+  <img class="mySlides" src="sitextra.jpg" alt="Image 3">
+
+  <div class="text">Légende de l'image 1</div>
+  <div class="text">Légende de l'image 2</div>
+  <div class="text">Légende de l'image 3</div>
+</div>
+
+<script>
+  let slideIndex = 0;
+  carousel();
+
+  function carousel() {
+    let i;
+    const slides = document.getElementsByClassName("mySlides");
+    const texts = document.getElementsByClassName("text");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+      texts[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 }
+    slides[slideIndex - 1].style.display = "block";
+    texts[slideIndex - 1].style.display = "block";
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Portfolio Website HTML CSS and Javascript | Codehal</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="cover cover-left"></div>
+        <div class="cover cover-right"></div>
+
+        <div class="book">
+            <!-- profile page -->
+            <div class="book-page page-left">
+                <div class="profile-page">
+                    <img src="photo.png" alt="">
+                    <h1>Celyo Garcia</h1>
+                    <h3>Etudiant</h3>
+
+                    <div class="social-media">
+                        <a href="https://www.linkedin.com/in/celyo-garcia-bouilhol-8656432b5/"><i class='bx bxl-linkedin'></i></a>
+                        <a href="https://www.instagram.com/txnvuy_/"><i class='bx bxl-instagram-alt'></i></a>
+                    </div>
+
+                    <p>Bienvenue sur mon portfolio ! Je suis un jeune passionné de design et de projets divers. Grâce à une année sabatique, j'ai exploré le monde professionnel à travers différents CDI, investissant mon temps libre dans des projets variés, dont la création d'une marque de vêtements. Mon portfolio témoigne de ma polyvalence, couvrant des domaines allant de la programmation à la création de contenus diversifiés.</p>
+
+                    <div class="btn-box">
+                        <a href="cv.html" class="btn" id="telechargerCV">Telecharger CV</a>
+                        <a href="#" class="btn contact-me">Me contacter</a>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                // Fonction pour déclencher le téléchargement du CV
+                function telechargerCV() {
+                    // Créer un élément <a> avec un lien vers votre fichier CV
+                    var lienCV = document.createElement('a');
+                    lienCV.href = '/Document-sans-titre.pdf'; // Utilisez un chemin relatif
+                    lienCV.download = 'Document-sans-titre.pdf'; // Nom du fichier à télécharger
+            
+                    // Simuler un clic sur l'élément <a> pour déclencher le téléchargement
+                    lienCV.click();
+                }
+            
+                // Ajouter un écouteur d'événements pour détecter le clic sur le bouton
+                document.getElementById('telechargerCV').addEventListener('click', telechargerCV);
+            </script>
+
+            <!-- page 1 & 2 -->
+            <div class="book-page page-right turn" id="turn-1">
+                <!-- page 1 (work experience) -->
+                <div class="page-front">
+                    <h1 class="title">Mes éxperiences</h1>
+
+                    <div class="workeduc-box">
+                        <div class="workeduc-content">
+                            <span class="year"><i class='bx bxs-calendar'></i>2022 - 2024</span>
+                            <h3>Création de vêtements - Marque</h3>
+                            <p>Depuis 2022, en collaboration avec un associé, nous avons élaboré une marque de vêtements, traversant diverses étapes de production.</p>
+                        </div>
+
+                        <div class="workeduc-content">
+                            <span class="year"><i class='bx bxs-calendar'></i>2020 - 2022</span>
+                            <h3>Création de sites - Programmation</h3>
+                            <p>Au cours de ma dernière année de collège, j'ai découvert un intérêt pour les langages de programmation. Grâce à un apprentissage autodidacte, j'ai pu consolider mes connaissances.</p>
+                        </div>
+
+                        <div class="workeduc-content">
+                            <span class="year"><i class='bx bxs-calendar'></i>2022 - 2023</span>
+                            <h3>Differents projets - Entrepreunariat</h3>
+                            <p>Pour assurer le développement de mes projets, je m'implique à chaque étape de leur création. Sur l'ensemble de mes initiatives, je conçois mes propres illustrations, cherchant à exprimer mon univers unique à travers mes designs.</p>
+                        </div>
+                    </div>
+
+                    <span class="number-page">1</span>
+
+                    <!-- next button -->
+                    <span class="nextprev-btn" data-page="turn-1">
+                        <i class='bx bx-chevron-right'></i>
+                    </span>
+                </div>
+                
+                <!-- page 2 (education) -->
+                <div class="page-back">
+                    <h1 class="title">Parcours scolaire</h1>
+
+                    <div class="workeduc-box">
+                        <div class="workeduc-content">
+                            <span class="year"><i class='bx bxs-calendar'></i>2016 - 2020</span>
+                            <h3>Evariste Galois - Collège</h3>
+                            <p>Pendant mes années de collège, mon intérêt s'est porté vers les langages de programmation, ainsi que vers le dessin et le graphisme, me permettant de réaliser de nombreux projets.</p>
+                        </div>
+                    
+                        <div class="workeduc-content">
+                            <span class="year"><i class='bx bxs-calendar'></i>2020 - 2023</span>
+                            <h3>Parcours Technologique - Lycée</h3>
+                            <p>Après avoir quitté le collège, j'ai choisi de m'orienter vers une filière technologique, ce qui m'a permis d'acquérir une expérience significative dans le domaine informatique.</p>
+                        </div>
+                    
+                        <div class="workeduc-content">
+                            <span class="year"><i class='bx bxs-calendar'></i>2024 - 2027</span>
+                            <h3>Parcours artistique - Etudes superieurs</h3>
+                            <p>Je suis actuellement candidat libre pour le baccalauréat. Pour mes études supérieures, j'ai l'intention de me diriger vers une filière artistique, avec un intérêt particulier pour le graphisme en raison de son lien étroit avec le dessin.</p>
+                        </div>
+                    </div>
+
+                    <span class="number-page">2</span>
+                    
+                    <!-- prev button -->
+                    <span class="nextprev-btn back" data-page="turn-1">
+                        <i class='bx bx-chevron-left'></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- page 3 & 4 -->
+            <div class="book-page page-right turn" id="turn-2">
+                <!-- page 3 (my services) -->
+                <div class="page-front">
+                    <h1 class="title">Mes projets</h1>
+
+                    <div class="services-box">
+                        <div class="services-content">
+                            <i class='bx bx-code-alt'></i>
+                            <h3>Web Development</h3>
+                            <p>J'ai eu l'opportunité de développer quelques sites web et autres supports en programmation.</p>
+                            <a href="pageprog.html" class="btn">Lire plus</a>
+                        </div>
+
+                        <div class="services-content">
+                            <i class='bx bxs-paint'></i>
+                            <h3>Designs Creatifs</h3>
+                            <p>Explorant ma dimension artistique, j'ai concrétisé plusieurs projets graphiques.</p>
+                            <a href="pagedesign.html" class="btn">Lire plus</a>
+                        </div>
+
+                        <div class="services-content">
+                            <i class='bx bx-bar-chart-alt'></i>
+                            <h3>Digital Marketing</h3>
+                            <p>Je suis en train de lancer divers projets entrepreneuriaux.</p>
+                            <a href="pagebusiness.html" class="btn">Read More</a>
+                        </div>
+
+                    </div>
+
+                    <span class="number-page">3</span>
+                    
+                    <!-- next button -->
+                    <span class="nextprev-btn" data-page="turn-2">
+                        <i class='bx bx-chevron-right'></i>
+                    </span>
+                </div>
+                
+                <!-- page 4 (my skills) -->
+                <div class="page-back">
+                    <h1 class="title">Mes connaissances</h1>
+
+                    <div class="skills-box">
+                        <div class="skills-content">
+                            <h3>Front-End</h3>
+                            <div class="content">
+                                <span><i class='bx bxl-html5'></i>HTML</span>
+                                <span><i class='bx bxl-css3'></i>CSS</span>
+                                <span><i class='bx bxl-javascript'></i>JS</span>
+                                <span><i class='bx bxl-bootstrap'></i>Bootstrap</span>
+                            </div>
+                        </div>
+
+                        <div class="skills-content">
+                            <h3>Back-End</h3>
+                            <div class="content">
+                                <span><i class='bx bxl-python'></i>Python</span>
+                                <span><i class='bx bxl-java'></i>Java</span>
+                                <span><i class='bx bxl-nodejs'></i>Node</span>
+                            </div>
+                        </div>
+
+                        <div class="skills-content">
+                            <h3>UI/UX Design</h3>
+                            <div class="content">
+                                <span><i class='bx bxl-figma'></i>Figma</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <span class="number-page">4</span>
+                    
+                    <!-- prev button -->
+                    <span class="nextprev-btn back" data-page="turn-2">
+                        <i class='bx bx-chevron-left'></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- page 5 & 6 -->
+            <div class="book-page page-right turn" id="turn-3">
+                <!-- page 5 (latest project or my portfolio) -->
+                <div class="page-front">
+                    <h1 class="title">Dernier Project</h1>
+
+                    <div class="portfolio-box">
+                        <div class="img-box">
+                            <img src="image3.jpg" alt="">
+                        </div>
+
+                        <div class="info-box">
+                            <div class="info-title">
+                                <h3>Site Portfolio</h3>
+                                <a href="pagedesign.html">Voir<i class='bx bx-link-external'></i></a>
+                            </div>
+                            <p>Details :</p>
+                            <p>Ce site web a été développé en utilisant plusieurs langages de programmation tels que HTML pour la structure, CSS pour le style, et JavaScript pour les animations.</p>
+                        </div>
+                        
+                        <div class="btn-box">
+                            <a href="pagedesign.html" class="btn">Voir Projet</a>
+                            <a href="#" class="btn" data-page="turn-3">Autre Projets</a>
+                        </div>
+                    </div>
+
+                    <span class="number-page">5</span>
+                    
+                    <!-- next button -->
+                    <span class="nextprev-btn" data-page="turn-3">
+                        <i class='bx bx-chevron-right'></i>
+                    </span>
+                </div>
+                
+                <!-- page 6 (contact me) -->
+                <div class="page-back">
+                    <h1 class="title">Contactez moi !</h1>
+
+                    <div class="contact-box">
+                        <form action="#">
+                            <input type="text" class="field" placeholder="Hors service" required>
+                            <input type="email" class="field" placeholder="Hors service" required>
+                            <textarea name="" id="" cols="30" rows="10" class="field" placeholder="Hors service merci de me contacter via mail : gbcelyo@gmail.com" required></textarea>
+                            <input type="submit" class="btn" value="Envoyer">
+                        </form>
+                    </div>
+
+                    <span class="number-page">6</span>
+                    
+                    <!-- prev button -->
+                    <span class="nextprev-btn back" data-page="turn-3">
+                        <i class='bx bx-chevron-left'></i>
+                    </span>
+
+                    <a href="#" class="back-profile">
+                        <p>Profile</p>
+                        <i class='bx bxs-user'></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

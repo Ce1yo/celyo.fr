@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Carrousel d'Images</title>
+      <style>
+        .carousel {
+            display: flex; /* Utilisation de flex pour le centrage vertical et horizontal */
+            width: 70%;
+            justify-content: center; /* Centre horizontalement */
+            overflow: hidden;
+            position: relative;
+            border-radius: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 5%;
+        }
+
+        .carousel img {
+            max-width: 100%; /* Assure que l'image ne dépasse pas la largeur du conteneur */
+            height: auto; /* Pour maintenir le ratio d'aspect de l'image */
+            transform: translate(0, 0); /* Centre l'image en X: 0, Y: 0 */
+        }
+
+        .text {
+          position: absolute;
+          bottom: 10px;
+          left: 10px;
+          color: #fff;
+          font-size: 20px;
+          background: rgba(0, 0, 0, 0.5);
+          padding: 10px;
+          border-radius: 5px;
+        }
+      
+        .prev {
+          position: absolute;
+          top: 50%;
+          left: 10px;
+          transform: translateY(-50%);
+          font-size: 20px;
+          cursor: pointer;
+          color: #fff;
+          text-decoration: none;
+          padding: 10px;
+          background-color: rgba(0, 0, 0, 0.5);
+          border: none;
+          border-radius: 5px;
+        }
+      
+        .prev:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+      </style>
+    </head>
+    <body>
+
+        <a href="index.html" class="prev">&lt;</a>
+    
+    <div class="carousel">
+      <img class="mySlides" src="sitextra.jpg" alt="Image 1">
+      <img class="mySlides" src="appboul.jpg" alt="Image 2">
+      <img class="mySlides" src="botvinte.jpg" alt="Image 3">
+    
+      <div class="text">Légende de l'image 1</div>
+      <div class="text">Légende de l'image 2</div>
+      <div class="text">Légende de l'image 3</div>
+    </div>
+    
+    <script>
+      let slideIndex = 0;
+      carousel();
+    
+      function carousel() {
+        let i;
+        const slides = document.getElementsByClassName("mySlides");
+        const texts = document.getElementsByClassName("text");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+          texts[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        slides[slideIndex - 1].style.display = "block";
+        texts[slideIndex - 1].style.display = "block";
+        setTimeout(carousel, 4000); // Change image every 2 seconds
+      }
+    </script>
+    
+    </body>
+    </html>
+    
