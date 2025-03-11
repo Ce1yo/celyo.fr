@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">celyo.fr</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Qui je suis</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#competences">Compétences</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projets">Projets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#formulaire-contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section Accueil -->
+    <section id="home" class="vh-100 d-flex align-items-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center" data-aos="fade-up">
+                    <div class="text-white">
+                        <h1 class="display-4 fw-bold mb-4">Bienvenu sur mon Portfolio</h1>
+                        <p class="lead mb-5">Je m'appelle Celyo (comme le magasin mais avec un Y) et je suis à la recherche d'une alternance en communication.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Qui je suis -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="about-image position-relative">
+                        <img src="images/main.png" alt="Mon profil" class="img-fluid rounded-3 shadow-lg">
+                        <div class="experience-badge">
+                            <span class="number">19</span>
+                            <span class="text">Années d'existance</span>
+                        </div>
+                    </div>
+                    <div class="about-image-text">
+                        <p class="lead">Passionné par la technologie, la création et l'entrepreneuriat, j'ai développé en autodidacte de nombreuses compétences qui m'ont permis de lancer plusieurs projets. Actuellement en BTS Communication, je recherche une alternance pour ma deuxième année afin de continuer à évoluer.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="about-content ps-lg-4">
+                        <h6 class="text-primary fw-bold">QUI JE SUIS</h6>
+                        <h2 class="display-5 fw-bold mb-4">GARCIA BOUILHOL Celyo</h2>
+                       
+                        <div class="about-features">
+                            <div class="feature-item mb-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-rocket"></i>
+                                    </div>
+                                    <h4 class="mb-0 ms-3">Créatif & Innovant</h4>
+                                </div>
+                                <p class="text-muted">Toujours à la recherche de solutions créatives pour répondre aux besoins de mes projets.</p>
+                            </div>
+                            <div class="feature-item mb-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-laptop-code"></i>
+                                    </div>
+                                    <h4 class="mb-0 ms-3">Technologies Modernes</h4>
+                                </div>
+                                <p class="text-muted">Utilisation des dernières technologies pour des projets performants et innovants.</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <h4 class="mb-0 ms-3">Esprit d'Équipe</h4>
+                                </div>
+                                <p class="text-muted">Collaboration efficace et communication transparente pour des projets réussis.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Compétences -->
+    <section id="competences" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h6 class="text-primary fw-bold">CE QUE JE FAIS</h6>
+                <h2 class="display-5 fw-bold">Mes Compétences</h2>
+                <p class="lead">Technologies et outils que j'utilise au quotidien</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrapper">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Développement Front-end</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Vue.js</span>
+                        </div>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-label">
+                                <span>Expertise</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrapper">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h3>Suite Adobe</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Photoshop</span>
+                            <span class="skill-tag">Illustrator</span>
+                            <span class="skill-tag">InDesign</span>
+                            <span class="skill-tag">XD</span>
+                            <span class="skill-tag">Premiere Pro</span>
+                        </div>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-label">
+                                <span>Expertise</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrapper">
+                            <i class="fas fa-window-maximize"></i>
+                        </div>
+                        <h3>Suite Office</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Word</span>
+                            <span class="skill-tag">Excel</span>
+                            <span class="skill-tag">PowerPoint</span>
+                            <span class="skill-tag">Outlook</span>
+                            <span class="skill-tag">Teams</span>
+                        </div>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-label">
+                                <span>Expertise</span>
+                                <span>92%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrapper">
+                            <i class="fas fa-pencil-ruler"></i>
+                        </div>
+                        <h3>Design Graphique</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">UI/UX Design</span>
+                            <span class="skill-tag">Logo Design</span>
+                            <span class="skill-tag">Branding</span>
+                            <span class="skill-tag">Typography</span>
+                            <span class="skill-tag">Print Design</span>
+                        </div>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-label">
+                                <span>Expertise</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 88%" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrapper">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Design Responsive</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Mobile First</span>
+                            <span class="skill-tag">Bootstrap</span>
+                            <span class="skill-tag">Tailwind</span>
+                            <span class="skill-tag">Flexbox</span>
+                            <span class="skill-tag">Grid</span>
+                        </div>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-label">
+                                <span>Expertise</span>
+                                <span>94%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 94%" aria-valuenow="94" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrapper">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Marketing Digital & SEO</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">SEMrush</span>
+                            <span class="skill-tag">Google Analytics</span>
+                            <span class="skill-tag">Ahrefs</span>
+                            <span class="skill-tag">Google Ads</span>
+                            <span class="skill-tag">Meta Ads</span>
+                        </div>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-label">
+                                <span>Expertise</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Projets -->
+    <section id="projets" class="py-5">
+        <div class="container">
+            <h6 class="text-primary fw-bold text-center">CE QUE JE FAIS</h6>
+            <h2 class="display-5 fw-bold mb-5 text-center">Mes Projets</h2>
+            
+            <div class="row g-4">
+                <!-- Projet Abondance -->
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="project-card">
+                        <img src="images/abondance.jpg" alt="Projet Abondance" class="img-fluid">
+                        <div class="project-overlay">
+                            <div class="project-content text-center">
+                                <h4 class="text-white mb-3">Abondance</h4>
+                                <p class="text-white-50 mb-4">Plateforme de gestion de contenu pour les créateurs digitaux</p>
+                                <div class="d-flex justify-content-center gap-2">
+                                    <a href="https://abondance.store" class="btn btn-light" target="_blank" rel="noopener">Voir le projet</a>
+                                    <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#modalAbondance">En savoir plus</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet Boutikoo -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card">
+                        <img src="images/boutikoo.jpg" alt="Projet Boutikoo" class="img-fluid">
+                        <div class="project-overlay">
+                            <div class="project-content text-center">
+                                <h4 class="text-white mb-3">Boutikoo</h4>
+                                <p class="text-white-50 mb-4">Solution e-commerce innovante pour les petits commerces</p>
+                                <div class="d-flex justify-content-center gap-2">
+                                    <a href="https://boutikoo.fr" class="btn btn-light" target="_blank" rel="noopener">Voir le projet</a>
+                                    <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#modalBoutikoo">En savoir plus</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet Atelier de Celyo -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card">
+                        <img src="images/adc.jpg" alt="Atelier de Celyo" class="img-fluid">
+                        <div class="project-overlay">
+                            <div class="project-content text-center">
+                                <h4 class="text-white mb-3">Atelier de Celyo</h4>
+                                <p class="text-white-50 mb-4">Studio de création graphique et développement web</p>
+                                <div class="d-flex justify-content-center gap-2">
+                                    <a href="https://atelierdecelyo.com" class="btn btn-light" target="_blank" rel="noopener">Voir le projet</a>
+                                    <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#modalAtelier">En savoir plus</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modales -->
+            <!-- Modal Abondance -->
+            <div class="modal fade" id="modalAbondance" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header border-0 pb-0">
+                            <h4 class="modal-title fw-bold">Abondance</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="project-details">
+                                <div class="project-image mb-4">
+                                    <img src="images/abondance.jpg" alt="Abondance" class="img-fluid rounded-3">
+                                </div>
+                                <h5 class="fw-bold mb-3">À propos du projet</h5>
+                                <p class="text-muted">Abondance est une plateforme innovante conçue pour les créateurs de contenu digital. Elle offre :</p>
+                                <ul class="feature-list">
+                                    <li><i class="fas fa-check text-primary me-2"></i>Un système de gestion de contenu intuitif</li>
+                                    <li><i class="fas fa-check text-primary me-2"></i>Des outils d'analyse et de performance</li>
+                                    <li><i class="fas fa-check text-primary me-2"></i>Une interface personnalisable</li>
+                                    <li><i class="fas fa-check text-primary me-2"></i>Des fonctionnalités de monétisation avancées</li>
+                                </ul>
+                                <div class="tech-stack mt-4">
+                                    <h5 class="fw-bold mb-3">Technologies utilisées</h5>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="badge bg-light text-dark">React</span>
+                                        <span class="badge bg-light text-dark">Node.js</span>
+                                        <span class="badge bg-light text-dark">MongoDB</span>
+                                        <span class="badge bg-light text-dark">AWS</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Boutikoo -->
+            <div class="modal fade" id="modalBoutikoo" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header border-0 pb-0">
+                            <h4 class="modal-title fw-bold">Boutikoo</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="project-details">
+                                <div class="project-image mb-4">
+                                    <img src="images/boutikoo.jpg" alt="Boutikoo" class="img-fluid rounded-3">
+                                </div>
+                                <h5 class="fw-bold mb-3">À propos du projet</h5>
+                                <p class="text-muted">Boutikoo est une solution e-commerce complète pour les petits commerces, incluant :</p>
+                                <ul class="feature-list">
+                                    <li><i class="fas fa-check text-primary me-2"></i>Une interface de gestion simple et efficace</li>
+                                    <li><i class="fas fa-check text-primary me-2"></i>Un système de paiement sécurisé</li>
+                                    <li><i class="fas fa-check text-primary me-2"></i>Des outils marketing intégrés</li>
+                                    <li><i class="fas fa-check text-primary me-2"></i>Une optimisation pour le mobile</li>
+                                </ul>
+                                <div class="tech-stack mt-4">
+                                    <h5 class="fw-bold mb-3">Technologies utilisées</h5>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="badge bg-light text-dark">Vue.js</span>
+                                        <span class="badge bg-light text-dark">Laravel</span>
+                                        <span class="badge bg-light text-dark">MySQL</span>
+                                        <span class="badge bg-light text-dark">Stripe</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Atelier de Celyo -->
+            <div class="modal fade" id="modalAtelier" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header border-0 pb-0">
+                            <h4 class="modal-title fw-bold">Atelier de Celyo</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="project-details">
+                                <div class="project-image mb-4">
+                                    <img src="images/adc.jpg" alt="Atelier de Celyo" class="img-fluid rounded-3">
+                                </div>
+                                <h5 class="fw-bold mb-3">À propos du projet</h5>
+                                <p class="text-muted">L'Atelier de Celyo est un studio créatif offrant des services complets :</p>
+                                <ul class="feature-list">
+                                    <li><i class="fas fa-check text-primary me-2"></i>Design graphique et identité visuelle</li>
+                                    <li><i class="fas fa-check text-primary me-2"></i>Développement web sur mesure</li>
+                                    <li><i class="fas fa-check text-primary me-2"></i>Solutions digitales innovantes</li>
+                                    <li><i class="fas fa-check text-primary me-2"></i>Accompagnement personnalisé</li>
+                                </ul>
+                                <div class="tech-stack mt-4">
+                                    <h5 class="fw-bold mb-3">Technologies utilisées</h5>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="badge bg-light text-dark">WordPress</span>
+                                        <span class="badge bg-light text-dark">Adobe Suite</span>
+                                        <span class="badge bg-light text-dark">HTML/CSS</span>
+                                        <span class="badge bg-light text-dark">JavaScript</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="formulaire-contact" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center mb-5">
+                    <h2 class="fw-bold mb-4">Me Contacter</h2>
+                    <p class="text-muted">N'hésitez pas à me contacter pour discuter de vos projets ou opportunités.</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <form action="https://formspree.io/f/xjkvdwdw" method="POST" class="contact-form">
+                        <div class="mb-4">
+                            <input type="text" name="name" class="form-control" placeholder="Votre nom" required>
+                        </div>
+                        <div class="mb-4">
+                            <input type="email" name="email" class="form-control" placeholder="Votre email" required>
+                        </div>
+                        <div class="mb-4">
+                            <input type="text" name="subject" class="form-control" placeholder="Sujet" required>
+                        </div>
+                        <div class="mb-4">
+                            <textarea name="message" class="form-control" rows="5" placeholder="Votre message" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-lg">Envoyer</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2024 Celyo Garcia. Tous droits réservés.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                    <a href="https://instagram.com/celyo.fr" target="_blank" rel="noopener" class="text-decoration-none me-3">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/celyo" target="_blank" rel="noopener" class="text-decoration-none me-3">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:gbcelyo@gmail.com" class="text-decoration-none">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
