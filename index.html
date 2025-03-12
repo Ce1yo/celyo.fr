@@ -11,6 +11,14 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+    <!-- Pop-up notification -->
+    <div id="popup-notification" class="popup-notification hide">
+        <i class="fas fa-code"></i>
+        <p>Ce site a été codé de mes mains en HTML/CSS/JS !</p>
+        <button type="button" class="popup-close">&times;</button>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
@@ -25,6 +33,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#about">Qui je suis</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#timeline">Mon Parcours</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#competences">Compétences</a>
@@ -104,6 +115,73 @@
                                 <p class="text-muted">Collaboration efficace et communication transparente pour des projets réussis.</p>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Timeline -->
+    <section id="timeline" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h6 class="text-primary fw-bold">CE QUE J'AIME</h6>
+                <h2 class="display-5 fw-bold">Mon Parcours</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2024</div>
+                        <h4 class="timeline-title">Rentrée en BTS Communication</h4>
+                        <div class="timeline-dot"></div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2024</div>
+                        <h4 class="timeline-title">Obtention STI2D - Baccalauréat technologique</h4>
+                        <div class="timeline-dot"></div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2023</div>
+                        <h4 class="timeline-title">Ouverture d'une entreprise d'impression textile</h4>
+                        <div class="timeline-dot"></div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2023</div>
+                        <h4 class="timeline-title">Année sabbatique</h4>
+                        <div class="timeline-dot"></div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2021</div>
+                        <h4 class="timeline-title">Création d'une première marque de vêtements</h4>
+                        <div class="timeline-dot"></div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2019</div>
+                        <h4 class="timeline-title">Obtention du Brevet des collèges</h4>
+                        <div class="timeline-dot"></div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2005</div>
+                        <h4 class="timeline-title">J’ai vu le jour pour la première fois</h4>
+                        <div class="timeline-dot"></div>
                     </div>
                 </div>
             </div>
@@ -286,7 +364,7 @@
                         <div class="project-overlay">
                             <div class="project-content text-center">
                                 <h4 class="text-white mb-3">Abondance</h4>
-                                <p class="text-white-50 mb-4">Plateforme de gestion de contenu pour les créateurs digitaux</p>
+                                <p class="text-white-50 mb-4">Marque de vêtements en développement</p>
                                 <div class="d-flex justify-content-center gap-2">
                                     <a href="https://abondance.store" class="btn btn-light" target="_blank" rel="noopener">Voir le projet</a>
                                     <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#modalAbondance">En savoir plus</button>
@@ -303,7 +381,7 @@
                         <div class="project-overlay">
                             <div class="project-content text-center">
                                 <h4 class="text-white mb-3">Boutikoo</h4>
-                                <p class="text-white-50 mb-4">Solution e-commerce innovante pour les petits commerces</p>
+                                <p class="text-white-50 mb-4">Création de site e-commerce innovant pour les petits commerces</p>
                                 <div class="d-flex justify-content-center gap-2">
                                     <a href="https://boutikoo.fr" class="btn btn-light" target="_blank" rel="noopener">Voir le projet</a>
                                     <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#modalBoutikoo">En savoir plus</button>
@@ -320,7 +398,7 @@
                         <div class="project-overlay">
                             <div class="project-content text-center">
                                 <h4 class="text-white mb-3">Atelier de Celyo</h4>
-                                <p class="text-white-50 mb-4">Studio de création graphique et développement web</p>
+                                <p class="text-white-50 mb-4">Atelier d'impression d'accessoires et de textiles personnalisés</p>
                                 <div class="d-flex justify-content-center gap-2">
                                     <a href="https://atelierdecelyo.com" class="btn btn-light" target="_blank" rel="noopener">Voir le projet</a>
                                     <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#modalAtelier">En savoir plus</button>
@@ -333,8 +411,8 @@
 
             <!-- Modales -->
             <!-- Modal Abondance -->
-            <div class="modal fade" id="modalAbondance" tabindex="-1">
-                <div class="modal-dialog modal-dialog-centered">
+            <div class="modal fade" id="modalAbondance" tabindex="-1" data-bs-backdrop="true" data-bs-keyboard="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                     <div class="modal-content">
                         <div class="modal-header border-0 pb-0">
                             <h4 class="modal-title fw-bold">Abondance</h4>
@@ -346,7 +424,7 @@
                                     <img src="images/abondance.jpg" alt="Abondance" class="img-fluid rounded-3">
                                 </div>
                                 <h5 class="fw-bold mb-3">À propos du projet</h5>
-                                <p class="text-muted">Abondance est une plateforme innovante conçue pour les créateurs de contenu digital. Elle offre :</p>
+                                <p class="text-muted">Abondance est une marque en lien avec l'art, succédant à deux autres marques : NCM et X-TRA. </p>
                                 <ul class="feature-list">
                                     <li><i class="fas fa-check text-primary me-2"></i>Un système de gestion de contenu intuitif</li>
                                     <li><i class="fas fa-check text-primary me-2"></i>Des outils d'analyse et de performance</li>
@@ -356,9 +434,9 @@
                                 <div class="tech-stack mt-4">
                                     <h5 class="fw-bold mb-3">Technologies utilisées</h5>
                                     <div class="d-flex flex-wrap gap-2">
-                                        <span class="badge bg-light text-dark">React</span>
+                                        <span class="badge bg-light text-dark">Shopify</span>
                                         <span class="badge bg-light text-dark">Node.js</span>
-                                        <span class="badge bg-light text-dark">MongoDB</span>
+                                        <span class="badge bg-light text-dark">Zakeke</span>
                                         <span class="badge bg-light text-dark">AWS</span>
                                     </div>
                                 </div>
@@ -369,8 +447,8 @@
             </div>
 
             <!-- Modal Boutikoo -->
-            <div class="modal fade" id="modalBoutikoo" tabindex="-1">
-                <div class="modal-dialog modal-dialog-centered">
+            <div class="modal fade" id="modalBoutikoo" tabindex="-1" data-bs-backdrop="true" data-bs-keyboard="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                     <div class="modal-content">
                         <div class="modal-header border-0 pb-0">
                             <h4 class="modal-title fw-bold">Boutikoo</h4>
@@ -382,20 +460,21 @@
                                     <img src="images/boutikoo.jpg" alt="Boutikoo" class="img-fluid rounded-3">
                                 </div>
                                 <h5 class="fw-bold mb-3">À propos du projet</h5>
-                                <p class="text-muted">Boutikoo est une solution e-commerce complète pour les petits commerces, incluant :</p>
+                                <p class="text-muted">Boutikoo propose des solutions e-commerce complète pour les petits commerces, incluant :</p>
                                 <ul class="feature-list">
-                                    <li><i class="fas fa-check text-primary me-2"></i>Une interface de gestion simple et efficace</li>
+                                    <li><i class="fas fa-check text-primary me-2"></i>Le developpement d'un site internet e-commerce</li>
                                     <li><i class="fas fa-check text-primary me-2"></i>Un système de paiement sécurisé</li>
                                     <li><i class="fas fa-check text-primary me-2"></i>Des outils marketing intégrés</li>
-                                    <li><i class="fas fa-check text-primary me-2"></i>Une optimisation pour le mobile</li>
+                                    <li><i class="fas fa-check text-primary me-2"></i>Une gestion du SEO sur Google</li>
                                 </ul>
                                 <div class="tech-stack mt-4">
                                     <h5 class="fw-bold mb-3">Technologies utilisées</h5>
                                     <div class="d-flex flex-wrap gap-2">
-                                        <span class="badge bg-light text-dark">Vue.js</span>
-                                        <span class="badge bg-light text-dark">Laravel</span>
+                                        <span class="badge bg-light text-dark">HTML</span>
+                                        <span class="badge bg-light text-dark">Shopify</span>
+                                        <span class="badge bg-light text-dark">CSS</span>
                                         <span class="badge bg-light text-dark">MySQL</span>
-                                        <span class="badge bg-light text-dark">Stripe</span>
+                                        <span class="badge bg-light text-dark">SEMrush</span>
                                     </div>
                                 </div>
                             </div>
@@ -405,8 +484,8 @@
             </div>
 
             <!-- Modal Atelier de Celyo -->
-            <div class="modal fade" id="modalAtelier" tabindex="-1">
-                <div class="modal-dialog modal-dialog-centered">
+            <div class="modal fade" id="modalAtelier" tabindex="-1" data-bs-backdrop="true" data-bs-keyboard="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                     <div class="modal-content">
                         <div class="modal-header border-0 pb-0">
                             <h4 class="modal-title fw-bold">Atelier de Celyo</h4>
@@ -418,17 +497,17 @@
                                     <img src="images/adc.jpg" alt="Atelier de Celyo" class="img-fluid rounded-3">
                                 </div>
                                 <h5 class="fw-bold mb-3">À propos du projet</h5>
-                                <p class="text-muted">L'Atelier de Celyo est un studio créatif offrant des services complets :</p>
+                                <p class="text-muted">L'Atelier de Celyo est une entreprise d'impression textile personnalisé pour particuliers et professionels :</p>
                                 <ul class="feature-list">
-                                    <li><i class="fas fa-check text-primary me-2"></i>Design graphique et identité visuelle</li>
-                                    <li><i class="fas fa-check text-primary me-2"></i>Développement web sur mesure</li>
-                                    <li><i class="fas fa-check text-primary me-2"></i>Solutions digitales innovantes</li>
+                                    <li><i class="fas fa-check text-primary me-2"></i>Impression sur textile</li>
+                                    <li><i class="fas fa-check text-primary me-2"></i>Développement de design sur mesure</li>
+                                    <li><i class="fas fa-check text-primary me-2"></i>Solutions de personnalisation en ligne</li>
                                     <li><i class="fas fa-check text-primary me-2"></i>Accompagnement personnalisé</li>
                                 </ul>
                                 <div class="tech-stack mt-4">
                                     <h5 class="fw-bold mb-3">Technologies utilisées</h5>
                                     <div class="d-flex flex-wrap gap-2">
-                                        <span class="badge bg-light text-dark">WordPress</span>
+                                        <span class="badge bg-light text-dark">Shopify</span>
                                         <span class="badge bg-light text-dark">Adobe Suite</span>
                                         <span class="badge bg-light text-dark">HTML/CSS</span>
                                         <span class="badge bg-light text-dark">JavaScript</span>
@@ -448,7 +527,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center mb-5">
                     <h2 class="fw-bold mb-4">Me Contacter</h2>
-                    <p class="text-muted">N'hésitez pas à me contacter pour discuter de vos projets ou opportunités.</p>
+                    <p class="text-muted">Mon profil vous interesse ? Contactez moi dès maintenant !</p>
                 </div>
             </div>
             <div class="row justify-content-center">
@@ -479,13 +558,13 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-0">&copy; 2024 Celyo Garcia. Tous droits réservés.</p>
+                    <p class="mb-0">&copy; 2024 Celyo Garcia Bouilhol. Tous droits réservés.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
-                    <a href="https://instagram.com/celyo.fr" target="_blank" rel="noopener" class="text-decoration-none me-3">
+                    <a href="https://instagram.com/txnvuy_" target="_blank" rel="noopener" class="text-decoration-none me-3">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="https://linkedin.com/in/celyo" target="_blank" rel="noopener" class="text-decoration-none me-3">
+                    <a href="https://www.linkedin.com/in/celyo-garcia-bouilhol-8656432b5/" target="_blank" rel="noopener" class="text-decoration-none me-3">
                         <i class="fab fa-linkedin"></i>
                     </a>
                     <a href="mailto:gbcelyo@gmail.com" class="text-decoration-none">

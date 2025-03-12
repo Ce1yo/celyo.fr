@@ -25,31 +25,25 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Animation des barres de progression des compétences
-const animateProgressBars = () => {
-    document.querySelectorAll('.progress-bar').forEach(bar => {
-        const value = bar.getAttribute('aria-valuenow');
-        bar.style.width = '0%';
-        bar.style.transition = 'width 1s ease';
-        setTimeout(() => {
-            bar.style.width = `${value}%`;
-        }, 100);
-    });
+// Animation des barres de progression
+const progressBars = document.querySelectorAll('.progress-bar');
+
+const animateProgressBar = (progressBar) => {
+    const width = progressBar.getAttribute('aria-valuenow') + '%';
+    progressBar.style.setProperty('--width', width);
+    progressBar.classList.add('animate');
 };
 
-// Observer pour les animations des barres de progression
-const observer = new IntersectionObserver((entries) => {
+const progressObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            animateProgressBars();
-            observer.unobserve(entry.target);
+            animateProgressBar(entry.target);
+            progressObserver.unobserve(entry.target);
         }
     });
 }, { threshold: 0.5 });
 
-document.querySelector('#competences').querySelectorAll('.progress').forEach(progress => {
-    observer.observe(progress);
-});
+progressBars.forEach(bar => progressObserver.observe(bar));
 
 // Animation du texte d'accueil
 const typeWriter = (element, text, speed = 100) => {
@@ -92,4 +86,46 @@ document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('mouseleave', () => {
         card.querySelector('.project-overlay').style.opacity = '0';
     });
+});
+
+// Gestion des modales avec swipe sur mobile
+document.querySelectorAll('.modal').forEach(modal => {
+    let touchStart = 0;
+    let touchEnd = 0;
+
+    modal.addEventListener('touchstart', (e) => {
+        touchStart = e.changedTouches[0].screenY;
+    }, false);
+
+    modal.addEventListener('touchend', (e) => {
+        touchEnd = e.changedTouches[0].screenY;
+        if (touchEnd - touchStart > 50) {  // Si swipe vers le bas de plus de 50px
+            const modalInstance = bootstrap.Modal.getInstance(modal);
+            modalInstance.hide();
+        }
+    }, false);
+
+    // Fermeture au clic en dehors du modal
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            const modalInstance = bootstrap.Modal.getInstance(modal);
+            modalInstance.hide();
+        }
+    });
+});
+
+// Gestion du popup de notification
+const popup = document.getElementById('popup-notification');
+const closePopup = popup.querySelector('.popup-close');
+
+// Afficher le popup après 5 secondes
+setTimeout(() => {
+    popup.classList.remove('hide');
+    setTimeout(() => popup.classList.add('show'), 10);
+}, 5000);
+
+// Fermer le popup au clic sur la croix
+closePopup.addEventListener('click', () => {
+    popup.classList.remove('show');
+    setTimeout(() => popup.classList.add('hide'), 300);
 });
