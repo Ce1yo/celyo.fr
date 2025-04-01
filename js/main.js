@@ -122,16 +122,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Fonction pour afficher le popup
     function showPopup() {
-        if (floatingImage.style.right === '20px' || floatingImage.style.right === '10px') {
-            popup.classList.remove('hide');
-            popup.classList.add('show');
-            
-            // Cacher le popup après 5 secondes
-            clearTimeout(popupTimeout);
-            popupTimeout = setTimeout(() => {
-                hidePopup();
-            }, 5000);
-        }
+        popup.classList.remove('hide');
+        popup.classList.add('show');
+        
+        // Cacher le popup après 5 secondes
+        clearTimeout(popupTimeout);
+        popupTimeout = setTimeout(() => {
+            hidePopup();
+        }, 5000);
     }
 
     // Fonction pour cacher le popup
@@ -144,14 +142,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Afficher l'image après un délai
     setTimeout(function() {
-        if (window.innerWidth <= 480) {
-            floatingImage.style.right = '10px';
-        } else {
-            floatingImage.style.right = '20px';
-        }
+        floatingImage.style.right = '20px';
     }, 500);
 
-    // Afficher le popup après un court délai au chargement (seulement sur desktop)
+    // Afficher le popup après un court délai au chargement
     setTimeout(showPopup, 1500);
 
     // Gérer le scroll
@@ -163,15 +157,11 @@ document.addEventListener('DOMContentLoaded', function() {
             floatingImage.style.right = '-200px';
             hidePopup();
         } else {
-            if (window.innerWidth <= 480) {
-                floatingImage.style.right = '10px';
-            } else {
-                floatingImage.style.right = '20px';
-            }
+            floatingImage.style.right = '20px';
         }
     });
 
-    // Afficher le popup au clic sur l'image (seulement sur desktop)
+    // Afficher le popup au clic sur l'image
     floatingImage.addEventListener('click', () => {
         if (popup.classList.contains('hide')) {
             showPopup();
