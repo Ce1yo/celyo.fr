@@ -16,7 +16,6 @@
     <div id="popup-notification" class="popup-notification hide">
         <i class="fas fa-code"></i>
         <p>Ce site a été codé de mes mains en HTML/CSS/JS !</p>
-        <button type="button" class="popup-close">&times;</button>
     </div>
 
     <!-- Navigation -->
@@ -51,9 +50,14 @@
         </div>
     </nav>
 
+    <!-- Image flottante -->
+    <div class="floating-image" style="position: fixed; bottom: 0; right: -200px; z-index: 1000; transition: right 0.8s ease-out;">
+        <img src="images/coucou.png" alt="Petit bonhomme qui fait coucou" style="max-width: 200px;">
+    </div>
+
     <!-- Section Accueil -->
-    <section id="home" class="vh-100 d-flex align-items-center">
-        <div class="container">
+    <section id="home" class="vh-100 d-flex align-items-center" style="background-color: #007bff;">
+        <div class="container position-relative">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center" data-aos="fade-up">
                     <div class="text-white">
@@ -577,6 +581,25 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+            document.querySelector('.floating-image').style.right = '20px';
+        }, 500);
+
+        window.addEventListener('scroll', function() {
+            const homeSection = document.getElementById('home');
+            const floatingImage = document.querySelector('.floating-image');
+            const homeSectionBottom = homeSection.offsetTop + homeSection.offsetHeight;
+            
+            if (window.scrollY >= homeSectionBottom) {
+                floatingImage.style.right = '-200px';
+            } else {
+                floatingImage.style.right = '20px';
+            }
+        });
+    });
+    </script>
     <script src="js/main.js"></script>
 </body>
 </html>
