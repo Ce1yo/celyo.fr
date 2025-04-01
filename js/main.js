@@ -118,52 +118,65 @@ document.querySelectorAll('.modal').forEach(modal => {
 document.addEventListener('DOMContentLoaded', function() {
     const popup = document.getElementById('popup-notification');
     const floatingImage = document.querySelector('.floating-image');
+    let popupTimeout;
 
     // Fonction pour afficher le popup
     function showPopup() {
-        popup.classList.remove('hide');
-        popup.classList.add('show');
-        
-        // Cacher le popup après 5 secondes
-        setTimeout(() => {
-            popup.classList.remove('show');
-            setTimeout(() => {
-                popup.classList.add('hide');
-            }, 400);
-        }, 5000);
+        if (window.innerWidth > 480 && (floatingImage.style.right === '20px' || floatingImage.style.right === '10px')) {
+            popup.classList.remove('hide');
+            popup.classList.add('show');
+            
+            // Cacher le popup après 5 secondes
+            clearTimeout(popupTimeout);
+            popupTimeout = setTimeout(() => {
+                hidePopup();
+            }, 5000);
+        }
     }
 
-    // Afficher le popup après un court délai au chargement
-    setTimeout(showPopup, 1500);
+    // Fonction pour cacher le popup
+    function hidePopup() {
+        popup.classList.remove('show');
+        setTimeout(() => {
+            popup.classList.add('hide');
+        }, 400);
+    }
 
-    // Afficher le popup au clic sur l'image
-    floatingImage.addEventListener('click', () => {
-        if (popup.classList.contains('hide')) {
-            showPopup();
+    // Afficher l'image après un délai
+    setTimeout(function() {
+        if (window.innerWidth <= 480) {
+            floatingImage.style.right = '10px';
+        } else {
+            floatingImage.style.right = '20px';
+        }
+    }, 500);
+
+    // Afficher le popup après un court délai au chargement (seulement sur desktop)
+    if (window.innerWidth > 480) {
+        setTimeout(showPopup, 1500);
+    }
+
+    // Gérer le scroll
+    window.addEventListener('scroll', function() {
+        const homeSection = document.getElementById('home');
+        const homeSectionBottom = homeSection.getBoundingClientRect().bottom;
+        
+        if (homeSectionBottom <= 0) {
+            floatingImage.style.right = '-200px';
+            hidePopup();
+        } else {
+            if (window.innerWidth <= 480) {
+                floatingImage.style.right = '10px';
+            } else {
+                floatingImage.style.right = '20px';
+            }
         }
     });
 
-    // Faire apparaître l'image
-    setTimeout(function() {
-        floatingImage.style.right = '20px';
-    }, 500);
-
-    // Gérer le défilement
-    window.addEventListener('scroll', function() {
-        const homeSection = document.getElementById('home');
-        const homeSectionBottom = homeSection.offsetTop + homeSection.offsetHeight;
-        
-        if (window.scrollY >= homeSectionBottom) {
-            floatingImage.style.right = '-200px';
-            // Cacher aussi la bulle si elle est encore visible
-            if (!popup.classList.contains('hide')) {
-                popup.classList.remove('show');
-                setTimeout(() => {
-                    popup.classList.add('hide');
-                }, 400);
-            }
-        } else {
-            floatingImage.style.right = '20px';
+    // Afficher le popup au clic sur l'image (seulement sur desktop)
+    floatingImage.addEventListener('click', () => {
+        if (window.innerWidth > 480 && popup.classList.contains('hide')) {
+            showPopup();
         }
     });
 });
