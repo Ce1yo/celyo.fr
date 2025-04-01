@@ -14,21 +14,32 @@
 /* Pop-up notification */
 .popup-notification {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background: linear-gradient(135deg, var(--gradient-color-1), var(--gradient-color-2));
-    padding: 18px 25px;
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
+    bottom: 230px;
+    right: 40px;
+    background: white;
+    padding: 14px 20px;
+    border-radius: 25px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     z-index: 9999;
     display: flex;
     align-items: center;
-    gap: 15px;
-    transform: translateY(100px);
+    gap: 12px;
+    transform: translateY(20px);
     opacity: 0;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    max-width: 260px;
+}
+
+.popup-notification::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    right: 100px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid white;
 }
 
 .popup-notification.show {
@@ -41,30 +52,30 @@
 }
 
 .popup-notification i {
-    font-size: 1.1rem;
-    color: white;
-    background: rgba(255, 255, 255, 0.2);
-    width: 28px;
-    height: 28px;
+    font-size: 0.9rem;
+    color: var(--accent-color);
+    background: rgba(59, 130, 246, 0.1);
+    width: 22px;
+    height: 22px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 4px;
+    border-radius: 6px;
 }
 
 .popup-notification p {
     margin: 0;
-    font-size: 0.95rem;
-    color: white;
+    font-size: 0.85rem;
+    color: var(--text-color);
     font-weight: 500;
-    letter-spacing: 0.2px;
+    line-height: 1.4;
 }
 
 .popup-close {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.05);
     border: none;
-    font-size: 16px;
-    color: white;
+    font-size: 14px;
+    color: var(--text-color);
     cursor: pointer;
     padding: 4px 7px;
     line-height: 1;
@@ -77,22 +88,86 @@
 }
 
 .popup-close:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(0, 0, 0, 0.1);
     transform: scale(1.1);
+}
+
+.popup-close:focus {
+    box-shadow: none;
+    opacity: 1;
 }
 
 @media (max-width: 768px) {
     .popup-notification {
-        bottom: 20px;
-        right: 20px;
-        left: 20px;
-        padding: 15px 20px;
+        bottom: 150px;
+        right: 15px;
+        left: 15px;
+        padding: 10px 15px;
+        max-width: none;
+        font-size: 0.9rem;
     }
     
+    .popup-notification::after {
+        right: 50px;
+    }
+
     .popup-notification i {
-        width: 24px;
-        height: 24px;
-        font-size: 1rem;
+        width: 18px;
+        height: 18px;
+        font-size: 0.8rem;
+    }
+
+    .popup-notification p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .popup-notification {
+        bottom: 120px;
+        padding: 8px 12px;
+        right: 10px;
+        left: 10px;
+    }
+
+    .popup-notification::after {
+        right: 35px;
+    }
+
+    .popup-notification i {
+        width: 16px;
+        height: 16px;
+        font-size: 0.75rem;
+    }
+
+    .popup-notification p {
+        font-size: 0.75rem;
+    }
+}
+
+/* Image flottante */
+.floating-image {
+    position: fixed;
+    bottom: 20px;
+    right: -200px;
+    z-index: 1000;
+    transition: right 0.8s ease-out;
+}
+
+.floating-image img {
+    max-width: 200px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .floating-image img {
+        max-width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .floating-image img {
+        max-width: 90px;
     }
 }
 
