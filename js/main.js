@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Fonction pour afficher le popup
     function showPopup() {
-        if (window.innerWidth > 480 && (floatingImage.style.right === '20px' || floatingImage.style.right === '10px')) {
+        if (floatingImage.style.right === '20px' || floatingImage.style.right === '10px') {
             popup.classList.remove('hide');
             popup.classList.add('show');
             
@@ -152,9 +152,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 500);
 
     // Afficher le popup après un court délai au chargement (seulement sur desktop)
-    if (window.innerWidth > 480) {
-        setTimeout(showPopup, 1500);
-    }
+    setTimeout(showPopup, 1500);
 
     // Gérer le scroll
     window.addEventListener('scroll', function() {
@@ -175,7 +173,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Afficher le popup au clic sur l'image (seulement sur desktop)
     floatingImage.addEventListener('click', () => {
-        if (window.innerWidth > 480 && popup.classList.contains('hide')) {
+        if (popup.classList.contains('hide')) {
             showPopup();
         }
     });
