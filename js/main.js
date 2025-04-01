@@ -114,18 +114,56 @@ document.querySelectorAll('.modal').forEach(modal => {
     });
 });
 
-// Gestion du popup de notification
-const popup = document.getElementById('popup-notification');
-const closePopup = popup.querySelector('.popup-close');
+// Popup notification et gestion de l'image flottante
+document.addEventListener('DOMContentLoaded', function() {
+    const popup = document.getElementById('popup-notification');
+    const floatingImage = document.querySelector('.floating-image');
 
-// Afficher le popup après 5 secondes
-setTimeout(() => {
-    popup.classList.remove('hide');
-    setTimeout(() => popup.classList.add('show'), 10);
-}, 5000);
+    // Fonction pour afficher le popup
+    function showPopup() {
+        popup.classList.remove('hide');
+        popup.classList.add('show');
+        
+        // Cacher le popup après 5 secondes
+        setTimeout(() => {
+            popup.classList.remove('show');
+            setTimeout(() => {
+                popup.classList.add('hide');
+            }, 400);
+        }, 5000);
+    }
 
-// Fermer le popup au clic sur la croix
-closePopup.addEventListener('click', () => {
-    popup.classList.remove('show');
-    setTimeout(() => popup.classList.add('hide'), 300);
+    // Afficher le popup après un court délai au chargement
+    setTimeout(showPopup, 1500);
+
+    // Afficher le popup au clic sur l'image
+    floatingImage.addEventListener('click', () => {
+        if (popup.classList.contains('hide')) {
+            showPopup();
+        }
+    });
+
+    // Faire apparaître l'image
+    setTimeout(function() {
+        floatingImage.style.right = '20px';
+    }, 500);
+
+    // Gérer le défilement
+    window.addEventListener('scroll', function() {
+        const homeSection = document.getElementById('home');
+        const homeSectionBottom = homeSection.offsetTop + homeSection.offsetHeight;
+        
+        if (window.scrollY >= homeSectionBottom) {
+            floatingImage.style.right = '-200px';
+            // Cacher aussi la bulle si elle est encore visible
+            if (!popup.classList.contains('hide')) {
+                popup.classList.remove('show');
+                setTimeout(() => {
+                    popup.classList.add('hide');
+                }, 400);
+            }
+        } else {
+            floatingImage.style.right = '20px';
+        }
+    });
 });
